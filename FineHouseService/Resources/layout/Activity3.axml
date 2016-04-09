@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TextView
         android:text="KidZapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtKidZapp" />
+        android:id="@+id/txtKidzapp" />
     <TextView
         android:text="for parents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtForParents" />
+        android:id="@+id/txtForparents" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Login"
-        android:id="@+id/txtUsername" />
+        android:hint="Name"
+        android:id="@+id/txtName" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:id="@+id/txtEmail" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:id="@+id/txtPassword" />
-    <Button
-        android:text="Sign Up"
+        android:id="@+id/txtPassword1" />
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSignUp" />
+        android:hint="Repeat Password"
+        android:id="@+id/txtPassword2" />
     <Button
-        android:text="Log In"
+        android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLogIn" />
+        android:id="@+id/btnSignUpx" />
 </LinearLayout>
