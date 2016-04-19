@@ -20,4 +20,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtUsr" />
+    <TextView
+        android:text="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMail" />
+    <TextView
+        android:text="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPass1" />
+    <TextView
+        android:text="PasswordConf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPass2" />
 </LinearLayout>

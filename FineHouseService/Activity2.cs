@@ -18,9 +18,12 @@ namespace FineHouseService
     public class Activity2 : Activity
     {
 
-        User mLoggedOnUser;
+        User mUser;
         public TextView mUsr;
         public TextView mId;
+        public TextView mEm;
+        public TextView mPass1;
+        public TextView mPass2;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -31,10 +34,16 @@ namespace FineHouseService
 
             mUsr = FindViewById<TextView>(Resource.Id.txtUsr);
             mId = FindViewById<TextView>(Resource.Id.txtId);
+            mEm = FindViewById<TextView>(Resource.Id.txtMail);
+            mPass1 = FindViewById<TextView>(Resource.Id.txtPass1);
+            mPass2 = FindViewById<TextView>(Resource.Id.txtPass2);
 
-            mLoggedOnUser = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("User"));
-            mId.Text = mLoggedOnUser.UserID.ToString();
-            mUsr.Text = mLoggedOnUser.UserName.ToString();
+            mUser = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("User"));
+            mId.Text = mUser.UserID.ToString();
+            mUsr.Text = mUser.UserName.ToString();
+            mEm.Text = mUser.Email.ToString();
+            mPass1.Text = mUser.Password.ToString();
+            mPass2.Text = mUser.Password2.ToString();
 
 
         }

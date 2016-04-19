@@ -15,6 +15,7 @@ namespace FineHouseService
         public Button mButtonLogIn;
         public Button mButtonSignUp;
         public EditText mUserName;
+        public EditText mPassword;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,7 +28,7 @@ namespace FineHouseService
             mButtonSignUp = FindViewById<Button>(Resource.Id.btnSignUp);
 
             mUserName = FindViewById<EditText>(Resource.Id.txtUsername);
-
+            mPassword = FindViewById<EditText>(Resource.Id.txtPassword);
 
             mButtonLogIn.Click += MButtonLogIn_Click;
             mButtonSignUp.Click += MButtonSignUp_Click;
@@ -49,7 +50,11 @@ namespace FineHouseService
             {
                 UserID = 1,
                 UserName = mUserName.Text,
-                Password = "password"
+                Password = mPassword.Text,
+                Password2 = "nic",
+                Email = "nic2"
+                
+                
             };
             intent.PutExtra("User", JsonConvert.SerializeObject(user));
 

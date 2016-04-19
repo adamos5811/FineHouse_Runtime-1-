@@ -16,7 +16,7 @@ namespace FineHouseService
     [Activity(Label = "Activity3")]
     class Activity3 : Activity
     {
-        User mLoggedOnUserx;
+        User mUser;
         public EditText mName;
         public EditText mEmail;
         public EditText mPassword1;
@@ -40,8 +40,26 @@ namespace FineHouseService
             //mLoggedOnUserx = JsonConvert.DeserializeObject<User>(Intent.GetStringExtra("Userx"));
             // pobranie danych z pó³ i zapisanie do u¿ytkowinika
 
-
+            mButtonSignUp.Click += MButtonSignUp_Click;
         }
 
+        private void MButtonSignUp_Click(object sender, EventArgs e)
+        {
+
+            Intent intent = new Intent(this, typeof(Activity2));
+
+            User user = new User()
+            {
+                UserID = 1,
+                UserName = mName.Text,
+                Password = mPassword1.Text,
+                Password2 = mPassword2.Text,
+                Email = mEmail.Text,
+            };
+            intent.PutExtra("User", JsonConvert.SerializeObject(user));
+
+            this.StartActivity(intent);
+
+        }
     }
 }
